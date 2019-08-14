@@ -20,6 +20,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "gatsby": "^2.13.62",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "react": "^16.9.0",
