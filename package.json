@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/toastyboost/gatsby-boilerplate",
+  "author": "Dmitriy Sergeevich <dmitriy.dubotovkin@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-starter"
+  ],
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "dev": "rimraf public .cache && gatsby develop",
+    "develop": "rimraf public .cache && gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^2.13.62",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.0.0-beta.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.7.0"
+  }
+}

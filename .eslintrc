@@ -1,0 +1,38 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "max-len": [2, 120, 4],
+    "strict": 0,
+    "no-console": "warn",
+    "quotes": ["warn", "double"],
+    "prettier/prettier": "warn",
+    "react/prop-types": 0,
+    "no-unused-vars": "warn",
+    "react/display-name": 0
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["prettier", "jsx-a11y", "react"],
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["~/components", "./src/components"],
+        ["~/static", "./src/static"],
+        ["~/styles", "./src/styles"],
+        ["~/helpers", "./src/helpers"],
+        ["~/store", "./src/store"]
+      ]
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
