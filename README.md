@@ -2,13 +2,14 @@
 
 # Features
 
-Atomic structure
-React
-Redux (Thunk, Logger)
+Atomic structure  
+React  
+Redux (Thunk, Logger)  
+ENV
 
 # Styles
 
-Styled-components (Normailize, Fonts)
+Styled-components (Normailize, Fonts)  
 Critical CSS
 
 # Linting

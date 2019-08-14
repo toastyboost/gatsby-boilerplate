@@ -6,14 +6,21 @@
     "es6": true
   },
   "rules": {
-    "max-len": [2, 120, 4],
+    "max-len": [2, 80, 4],
     "strict": 0,
     "no-console": "warn",
     "quotes": ["warn", "double"],
     "prettier/prettier": "warn",
     "react/prop-types": 0,
     "no-unused-vars": "warn",
-    "react/display-name": 0
+    "react/display-name": 0,
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ]
   },
   "extends": [
     "eslint:recommended",
@@ -22,15 +29,6 @@
   ],
   "plugins": ["prettier", "jsx-a11y", "react"],
   "settings": {
-    "import/resolver": {
-      "alias": [
-        ["~/components", "./src/components"],
-        ["~/static", "./src/static"],
-        ["~/styles", "./src/styles"],
-        ["~/helpers", "./src/helpers"],
-        ["~/store", "./src/store"]
-      ]
-    },
     "react": {
       "version": "detect"
     }

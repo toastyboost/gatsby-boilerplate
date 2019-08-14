@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://reqres.in/api";
+const baseURL = process.env.API_URL;
 
 const fetchUsers = () => axios.get(`${baseURL}/users`);
 

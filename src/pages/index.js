@@ -1,13 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { Layout } from "~/components/templates";
-import { Test } from "~/components/blocks";
+import { Layout } from '~/components/templates';
+import { Test, Seo } from '~/components/blocks';
+
+const seoProps = {
+  title: 'Main',
+  desc: 'Main page',
+};
 
 const IndexPage = () => {
   return (
     <>
+      <Seo {...seoProps} />
       <Layout>
-        Index Page
         <Test />
       </Layout>
     </>
