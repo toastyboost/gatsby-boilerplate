@@ -7,11 +7,7 @@ import { createLogger } from "redux-logger";
 
 import rootReducer from "~/store/ducks";
 
-const getStore = () =>
-  createStore(
-    rootReducer,
-    applyMiddleware(thunk, createLogger({ collapsed: true }))
-  );
+const getStore = () => createStore(rootReducer, applyMiddleware(thunk, createLogger({ collapsed: true })));
 
 const store = getStore();
 

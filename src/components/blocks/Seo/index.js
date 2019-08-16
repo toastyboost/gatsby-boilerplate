@@ -3,13 +3,7 @@ import { Helmet } from "react-helmet";
 
 const site = process.env.WEBSITE_URL;
 
-const Seo = ({
-  lang = "en",
-  title = "",
-  desc = "",
-  keywords = "",
-  image = "",
-}) => (
+const Seo = ({ lang = "en", title = "", desc = "", keywords = "", image = "" }) => (
   <Helmet>
     <html lang={lang} />
     <title>{title}</title>
@@ -30,10 +24,7 @@ const Seo = ({
     <meta name="format-detection" content="address=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={desc} />
