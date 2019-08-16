@@ -19,8 +19,14 @@ module.exports = {
     "gatsby-plugin-no-sourcemaps",
     "gatsby-plugin-eslint",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-styled-components",
     "gatsby-plugin-webpack-size",
+    {
+      resolve: "gatsby-plugin-styled-components",
+      options: {
+        displayName: process.env.NODE_ENV !== "production",
+        fileName: false,
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -57,7 +63,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-favicon",
       options: {
-        logo: "./src/static/favicon.svg",
+        logo: "./src/static/favicon.png",
         appName: siteUrl,
         appDescription: null,
         developerName: null,

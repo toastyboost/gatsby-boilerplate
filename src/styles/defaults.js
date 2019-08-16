@@ -36,10 +36,6 @@ const GlobalDefaults = css`
     -webkit-font-smoothing: antialiased;
   }
 
-  body > div {
-    height: 100% !important;
-  }
-
   section {
     font-size: 1.6rem;
   }
@@ -94,7 +90,7 @@ const GlobalDefaults = css`
     list-style-type: none;
   }
 
-  /* ${AnimationStyles} */
+  ${AnimationStyles}
 `;
 
 export default GlobalDefaults;

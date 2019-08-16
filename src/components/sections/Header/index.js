@@ -1,12 +1,14 @@
 import React from "react";
 
 import { Logo } from "~/components/atoms";
-import { Container } from "./styles";
+import { Container, Wrapper } from "./styles";
 
 const Header = () => {
   return (
     <Container>
-      <Logo />
+      <Wrapper>
+        <Logo />
+      </Wrapper>
     </Container>
   );
 };

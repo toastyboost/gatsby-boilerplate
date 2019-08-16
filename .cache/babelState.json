@@ -7,6 +7,8 @@
           "stage": "develop",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": false,
             "ssr": false
           }
         }
@@ -24,6 +26,8 @@
           "stage": "develop-html",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": false,
             "ssr": false
           }
         }
@@ -41,6 +45,8 @@
           "stage": "build-html",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": false,
             "ssr": true
           }
         }
@@ -58,6 +64,8 @@
           "stage": "build-javascript",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": false,
             "ssr": true
           }
         }

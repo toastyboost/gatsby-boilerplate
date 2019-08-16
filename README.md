@@ -1,4 +1,4 @@
-# Gatsby Boilerplate
+# 🐣 Gatsby Boilerplate
 
 # Features
 

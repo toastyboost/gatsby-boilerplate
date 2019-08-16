@@ -6,7 +6,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/dmitriy/Dev/gatsby-boilerplate/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
-      options: {"plugins":[]},
+      options: {"plugins":[],"displayName":true,"fileName":false},
     },{
       plugin: require('/Users/dmitriy/Dev/gatsby-boilerplate/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":null},
@@ -15,7 +15,7 @@ var plugins = [{
       options: {"plugins":[],"siteUrl":"https://website.com"},
     },{
       plugin: require('/Users/dmitriy/Dev/gatsby-boilerplate/node_modules/gatsby-plugin-favicon/gatsby-ssr'),
-      options: {"plugins":[],"logo":"./src/static/favicon.svg","appName":"https://website.com","appDescription":null,"developerName":null,"developerURL":null,"dir":"auto","lang":"en","background":"#2c52da","theme_color":"#2c52da","display":"standalone","orientation":"any","start_url":"/","version":"1.0","icons":{"android":true,"appleIcon":true,"appleStartup":false,"coast":false,"favicons":true,"firefox":true,"yandex":false,"windows":false}},
+      options: {"plugins":[],"logo":"./src/static/favicon.png","appName":"https://website.com","appDescription":null,"developerName":null,"developerURL":null,"dir":"auto","lang":"en","background":"#2c52da","theme_color":"#2c52da","display":"standalone","orientation":"any","start_url":"/","version":"1.0","icons":{"android":true,"appleIcon":true,"appleStartup":false,"coast":false,"favicons":true,"firefox":true,"yandex":false,"windows":false}},
     },{
       plugin: require('/Users/dmitriy/Dev/gatsby-boilerplate/gatsby-ssr'),
       options: {"plugins":[]},
