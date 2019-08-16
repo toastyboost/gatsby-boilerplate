@@ -1,5 +1,6 @@
 import React from "react";
-import { Link as RouterLink } from "gatsby";
+
+import { RouterLink } from "./styles";
 
 const Link = ({ children, className, to }) => (
   <RouterLink className={className} to={to} activeClassName="active">

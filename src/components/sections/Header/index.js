@@ -1,9 +1,14 @@
 import React from "react";
 
+import { Logo } from "~/components/atoms";
 import { Container } from "./styles";
 
 const Header = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <Logo />
+    </Container>
+  );
 };
 
 export { Header };
