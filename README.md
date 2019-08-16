@@ -2,7 +2,7 @@
 
 # Features
 
-⚛ React  
+⚛ React 16  
 Redux (Thunk, Logger)  
 ENV  
 Atomic structure
