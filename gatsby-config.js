@@ -21,6 +21,15 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-webpack-size",
     {
+      resolve: "gatsby-plugin-intl",
+      options: {
+        path: `${__dirname}/src/locales`,
+        languages: ["en", "es"],
+        defaultLanguage: "en",
+        redirect: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-styled-components",
       options: {
         displayName: process.env.NODE_ENV !== "production",
@@ -39,11 +48,11 @@ module.exports = {
       resolve: "gatsby-plugin-alias-imports",
       options: {
         alias: {
-          "~/components": path.resolve(__dirname, "src/components"),
-          "~/static": path.resolve(__dirname, "src/static"),
-          "~/styles": path.resolve(__dirname, "src/styles"),
-          "~/helpers": path.resolve(__dirname, "src/helpers"),
-          "~/store": path.resolve(__dirname, "src/store"),
+          "~/components": `${__dirname}/src/components`,
+          "~/static": `${__dirname}/src/static`),
+          "~/styles": `${__dirname}/src/styles`),
+          "~/helpers": `${__dirname}/src/helpers`),
+          "~/store": `${__dirname}/src/store`),
         },
         extensions: ["js"],
       },
