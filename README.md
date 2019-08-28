@@ -11,7 +11,7 @@ yarn install && yarn start
 
 # Features
 
-🚀 React 16 (Functional components + Hooks)
+🚀 React 16 (Functional components + Hooks)  
 ⚛️ Redux (Thunk, Logger)  
 Dev/Prod inviroments  
 Atomic structure
@@ -22,7 +22,7 @@ Atomic structure
 Canonical urls  
 Favicons
 
-💅 Styled-components v5
+💅 Styled-components v5  
 Critical CSS  
 Normailize  
 ✍️Fonts
@@ -34,5 +34,5 @@ No sourcemaps in build
 
 # TODO
 
-Fix es-lint 5.0
+Fix es-lint 5.0  
 Add some design
