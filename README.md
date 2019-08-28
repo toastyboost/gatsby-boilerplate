@@ -12,11 +12,9 @@ yarn install && yarn start
 # Features
 
 🚀 React 16 (Functional components + Hooks)  
-⚛️ Redux (Thunk, Logger)  
-Dev/Prod inviroments  
-Atomic structure
+⚛️ Redux (HOCs, Thunk, Logger)
 
-⛑ React Helmet  
+👷‍♂️ React Helmet  
 🌍 i18n with change of direction  
 📈 Sitemap  
 Canonical urls  
@@ -31,8 +29,9 @@ Normailize
 👮‍ Eslint and workspace settings (jsx-a11y, react)
 
 No sourcemaps in build
+Dev/Prod inviroments  
+Atomic structure
 
 # TODO
 
-Fix es-lint 5.0  
 Add some design
