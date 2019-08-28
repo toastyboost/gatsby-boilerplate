@@ -1,5 +1,4 @@
 const dotenv = require("dotenv");
-const path = require("path");
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -49,10 +48,10 @@ module.exports = {
       options: {
         alias: {
           "~/components": `${__dirname}/src/components`,
-          "~/static": `${__dirname}/src/static`),
-          "~/styles": `${__dirname}/src/styles`),
-          "~/helpers": `${__dirname}/src/helpers`),
-          "~/store": `${__dirname}/src/store`),
+          "~/static": `${__dirname}/src/static`,
+          "~/styles": `${__dirname}/src/styles`,
+          "~/helpers": `${__dirname}/src/helpers`,
+          "~/store": `${__dirname}/src/store`,
         },
         extensions: ["js"],
       },
