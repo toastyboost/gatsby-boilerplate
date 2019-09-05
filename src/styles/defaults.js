@@ -9,7 +9,8 @@ const GlobalDefaults = css`
   ${FontsStyles}
   
   :root {
-    --main-font: Georgia, serif;
+    --main-font: "Roboto", sans-serif;
+    --text-font: "Merriweather", serif;
     --text-color: rgba(0, 0, 0, 0.85);
     --title-color: rgba(0, 0, 0, 1);
     --border-color: rgba(0, 0, 0, 0.05);

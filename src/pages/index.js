@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Layout } from "~/components/templates";
-import { Test, Seo } from "~/components/blocks";
+import { Test } from "~/components/blocks";
+import { Seo } from "~/components/sections";
 
 const seoProps = {
   title: "Main",

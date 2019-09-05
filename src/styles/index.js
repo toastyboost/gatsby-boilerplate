@@ -1,3 +1,1 @@
-import { Wrap } from "./common";
-
-export { Wrap };
+export { Wrap } from "./common";

@@ -1,5 +1,3 @@
-import { Link } from "./Link";
-import { Logo } from "./Logo";
-import { Loader } from "./Loader";
-
-export { Link, Logo, Loader };
+export { Link } from "./Link";
+export { Logo } from "./Logo";
+export { Loader } from "./Loader";
