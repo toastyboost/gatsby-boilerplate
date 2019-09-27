@@ -21,15 +21,15 @@ yarn install && yarn start
 ⚛️ Redux (HOCs, Thunk, Logger)
 
 🔹 React Helmet  
-🔹 Localisation (react-intl)
+🔹 Localisation (react-intl)  
 🔹 Sitemap  
 🔹 Canonical urls
 
 🔸 Styled-components v5  
 🔸 Critical CSS  
-🔸 Favicons  
-🔸 Normailize  
-🔸 Google / Static Fonts
+🔸 Favicons generator  
+🔸 CSS Normailize  
+🔸 Google / Static tpography
 
 Prittier  
 Eslint and workspace settings (jsx-a11y, react)
@@ -37,6 +37,7 @@ Eslint and workspace settings (jsx-a11y, react)
 No sourcemaps in build
 Development/Production environments  
 Atomic structure
+Examples
 
 # Problems
 

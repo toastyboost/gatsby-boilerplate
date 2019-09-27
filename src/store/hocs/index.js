@@ -1,3 +1,1 @@
-import { withUsers } from "./withUsers";
-
-export { withUsers };
+export { withUsers } from "./withUsers";
