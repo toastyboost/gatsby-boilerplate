@@ -1,1 +1,2 @@
-export { Test } from "./Test";
+export { TextBlock } from "./TextBlock";
+export { AsyncBlock } from "./AsyncBlock";

@@ -2,6 +2,6 @@ import React from "react";
 
 import { Container } from "./styles";
 
-const Footer = () => <Container>1</Container>;
+const todayYear = new Date().getFullYear();
 
-export { Footer };
+export const Footer = () => <Container>© 2013 – {todayYear}</Container>;

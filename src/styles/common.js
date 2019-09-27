@@ -1,26 +1,54 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { MEDIA } from "~/helpers";
+import { BREAKPOINTS } from "~/helpers/constants";
 
-const Wrap = styled.div`
+export const MEDIA = Object.keys(BREAKPOINTS).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (min-width: ${BREAKPOINTS[label] / 16}em) {
+      ${css(...args)};
+    }
+  `;
+
+  return acc;
+}, {});
+
+export const Wrap = styled.div`
   width: 100%;
   margin: 0 auto;
 
   ${MEDIA.PHONE`
-    padding: 0 12px;
-  `}
-
-  ${MEDIA.SMARTPHONE`
-    padding: 0 16px;
+    padding: 0 8px;
   `}
 
   ${MEDIA.TABLET`
-    padding: 0 20px;
+    padding: 0 12px;
   `}
 
   ${MEDIA.DESKTOP`
-    padding: 0 24px;
+    padding: 0 16px;
   `};
 `;
 
-export { Wrap };
+export const Content = styled.div`
+  display: flex;
+`;
+
+export const Header = styled.div`
+  display: flex;
+`;
+
+export const Block = styled.div`
+  display: flex;
+`;
+
+export const Title = styled.div`
+  display: flex;
+`;
+
+export const Text = styled.div`
+  display: flex;
+`;
+
+export const Button = styled.div`
+  display: flex;
+`;

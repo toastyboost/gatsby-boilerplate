@@ -1,6 +1,12 @@
 # 🐣 Gatsby Boilerplate
 
-Gatsby Boilerplate with latest (2k19) tehnologies
+Gatsby Boilerplate with latest (2k19) tehnologies.
+
+Best for:
+
+- Landings
+- Static websites
+- MVP prototypes
 
 # Getting started
 
@@ -14,24 +20,29 @@ yarn install && yarn start
 🚀 React 16 (Functional components + Hooks)  
 ⚛️ Redux (HOCs, Thunk, Logger)
 
-👷‍♂️ React Helmet  
-🌍 i18n with change of direction  
-📈 Sitemap  
-Canonical urls  
-Favicons
+🔹 React Helmet  
+🔹 Localisation (react-intl)
+🔹 Sitemap  
+🔹 Canonical urls
 
-💅 Styled-components v5  
-Critical CSS  
-Normailize  
-✍️Fonts
+🔸 Styled-components v5  
+🔸 Critical CSS  
+🔸 Favicons  
+🔸 Normailize  
+🔸 Google / Static Fonts
 
-✍️ Prittier  
-👮‍ Eslint and workspace settings (jsx-a11y, react)
+Prittier  
+Eslint and workspace settings (jsx-a11y, react)
 
 No sourcemaps in build
-Dev/Prod inviroments  
+Development/Production environments  
 Atomic structure
+
+# Problems
+
+Sometimes Gatsby build and develop processes stuck on createPagesStatefully stage. In this case just reload task.
 
 # TODO
 
-Add some design
+Make Typography component
+Resolve unpredictable build/develop process stuck

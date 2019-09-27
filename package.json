@@ -13,17 +13,16 @@
     "node": ">= 8"
   },
   "scripts": {
-    "dev": "rimraf public .cache && gatsby develop",
-    "develop": "rimraf public .cache && gatsby develop",
-    "start": "npm run develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "clean": "rimraf public .cache",
+    "start": "yarn clean && gatsby develop",
+    "build": "yarn clean && gatsby build",
+    "serve": "yarn clean && gatsby develop -H 0.0.0.0 -p 8001"
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "click-outside-hook": "^1.1.0",
     "gatsby": "^2.13.62",
     "gatsby-plugin-alias-imports": "^1.0.5",
-    "gatsby-plugin-eslint": "^2.0.5",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-google-analytics": "^2.1.7",
     "gatsby-plugin-intl": "^0.2.8",

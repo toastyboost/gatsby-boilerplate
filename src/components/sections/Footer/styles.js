@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 const Container = styled.footer`
-  background-color: rgba(0, 0, 0, 0.05);
-  height: 30px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border-color);
+  padding: 24px;
+  text-align: center;
 `;
 
 export { Container };

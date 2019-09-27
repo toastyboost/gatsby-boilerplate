@@ -16,7 +16,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sitemap",
     "gatsby-plugin-no-sourcemaps",
-    "gatsby-plugin-eslint",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-webpack-size",
     {

@@ -1,4 +1,1 @@
-import { BREAKPOINTS } from "./constants";
-import { MEDIA } from "./media";
-
-export { BREAKPOINTS, MEDIA };
+export { Translate } from "./helpers";

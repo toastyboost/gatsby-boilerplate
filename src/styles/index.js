@@ -1,1 +1,1 @@
-export { Wrap } from "./common";
+export { Wrap, MEDIA } from "./common";

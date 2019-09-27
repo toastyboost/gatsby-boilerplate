@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Layout } from "~/components/templates";
-import { Test } from "~/components/blocks";
-import { Seo } from "~/components/sections";
+
+import { Fonts, Async, Seo } from "~/components/sections";
 
 const seoProps = {
   title: "Main",
@@ -14,7 +14,8 @@ const IndexPage = () => {
     <>
       <Seo {...seoProps} />
       <Layout>
-        <Test />
+        <Async />
+        <Fonts />
       </Layout>
     </>
   );

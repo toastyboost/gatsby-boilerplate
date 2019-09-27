@@ -2,7 +2,7 @@ import React from "react";
 
 import { LoadContainer, Load, LoadCut, LoadShape } from "./styles";
 
-const Loader = () => (
+export const Loader = () => (
   <LoadContainer>
     <Load>
       <LoadCut>
@@ -11,5 +11,3 @@ const Loader = () => (
     </Load>
   </LoadContainer>
 );
-
-export { Loader };

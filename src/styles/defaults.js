@@ -13,6 +13,8 @@ const GlobalDefaults = css`
     --text-font: "Merriweather", serif;
     --text-color: rgba(0, 0, 0, 0.85);
     --title-color: rgba(0, 0, 0, 1);
+    --link-active: #03a9f4;
+    --link-hover: #2196f3;
     --border-color: rgba(0, 0, 0, 0.05);
     --body-bg: #fff;
     --block-bg: #fff;
@@ -89,6 +91,12 @@ const GlobalDefaults = css`
 
   li {
     list-style-type: none;
+  }
+
+  section,
+  header,
+  footer {
+    font-size: 1.6rem;
   }
 
   ${AnimationStyles}
