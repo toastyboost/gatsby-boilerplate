@@ -1,19 +1,10 @@
 import styled from "styled-components";
 
-const StyledOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-`;
+import { FixedBackground } from "~/styles/common";
 
-const StyledWindow = styled.div`
+export const PopupBackground = styled(FixedBackground)``;
+
+export const PopupWindow = styled.div`
   top: auto;
   height: auto;
   position: relative;
@@ -42,7 +33,7 @@ const closeStyles = `
   height: 0;
 `;
 
-const CloseButton = styled.div`
+export const CloseButton = styled.div`
   position: absolute;
   z-index: 1002;
   height: 25px;
@@ -97,5 +88,3 @@ const CloseButton = styled.div`
     opacity: 1;
   }
 `;
-
-export { StyledOverlay, StyledWindow, CloseButton };

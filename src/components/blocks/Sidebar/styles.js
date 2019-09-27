@@ -1,33 +1,10 @@
 import styled from "styled-components";
 
-import { Logo, Burger } from "~/components/atoms";
+import { Burger } from "~/components/atoms";
 
-import { Menu } from "~/components/blocks";
-import { Copyrights } from "../Copyrights";
+import { MEDIA, FixedBackground } from "~/styles/common";
 
-import { MEDIA } from "~/helpers";
-
-export const Background = styled.div`
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1001;
-  opacity: ${p => (p.isVisible ? "1" : "0")};
-  visibility: ${p => (p.isVisible ? "inherit" : "hidden")};
-  transition: all 0.15s ease-in-out;
-  cursor: pointer;
-
-  ${MEDIA.PHONE`
-    display: block;
-  `}
-
-  ${MEDIA.DESKTOP`
-    display: none;
-  `};
-`;
+export const AsideBackground = styled(FixedBackground)``;
 
 export const Aside = styled.aside`
   opacity: ${p => (p.isVisible ? "1" : "0")};
@@ -64,8 +41,6 @@ export const AsideHeader = styled.div`
   border-bottom: 1px solid var(--border-color);
 `;
 
-export const AsideLogo = styled(Logo)``;
-
 export const AsideBurger = styled(Burger)``;
 
 export const AsideContent = styled.div`
@@ -79,21 +54,3 @@ export const AsideContent = styled.div`
     font-size: 1.6rem;
   }
 `;
-
-export const AsideMenu = styled(Menu)`
-  a {
-    margin-left: 0;
-    width: 100%;
-  }
-`;
-
-export const AsideFooter = styled.div`
-  margin-top: auto;
-  width: 100%;
-  padding: 0 18px 18px 18px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-`;
-
-export const AsideCopy = styled(Copyrights)``;

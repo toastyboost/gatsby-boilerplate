@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import isClickedOutside from "click-outside-hook";
 
-import { StyledOverlay, StyledWindow, CloseButton } from "./styles";
+import { PopupBackground, PopupWindow, CloseButton } from "./styles";
 
 const Portal = ({ children }) =>
   typeof document !== "undefined" && ReactDOM.createPortal(children, document.getElementById("___gatsby"));
@@ -13,12 +13,12 @@ export const Popup = ({ children, toggle, isOpen, closeInside }) => {
   return (
     <Portal>
       {isOpen && (
-        <StyledOverlay>
-          <StyledWindow ref={ref}>
+        <PopupBackground>
+          <PopupWindow ref={ref}>
             <CloseButton isInside={closeInside} onClick={() => toggle(false)} />
             {children}
-          </StyledWindow>
-        </StyledOverlay>
+          </PopupWindow>
+        </PopupBackground>
       )}
     </Portal>
   );

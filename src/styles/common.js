@@ -52,3 +52,16 @@ export const Text = styled.div`
 export const Button = styled.div`
   display: flex;
 `;
+
+export const FixedBackground = styled.div`
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  opacity: ${p => (p.isVisible ? "1" : "0")};
+  visibility: ${p => (p.isVisible ? "inherit" : "hidden")};
+  transition: all 0.15s ease-in-out;
+`;
