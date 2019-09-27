@@ -1,12 +1,6 @@
 # 🐣 Gatsby Boilerplate
 
-Gatsby Boilerplate with latest (2k19) tehnologies.
-
-Best for:
-
-- Landings
-- Static websites
-- MVP prototypes
+Gatsby Boilerplate with latest (2k19) tehnologies. Usefull for: Landings, Static promo websites, MVP prototypes
 
 # Getting started
 
@@ -45,5 +39,5 @@ Sometimes Gatsby build and develop processes stuck on createPagesStatefully stag
 
 # TODO
 
-Make Typography component
+Make Typography component  
 Resolve unpredictable build/develop process stuck
