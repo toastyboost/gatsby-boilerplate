@@ -49,7 +49,7 @@ module.exports = {
           "~/components": `${__dirname}/src/components`,
           "~/static": `${__dirname}/src/static`,
           "~/styles": `${__dirname}/src/styles`,
-          "~/helpers": `${__dirname}/src/helpers`,
+          "~/libs": `${__dirname}/src/libs`,
           "~/store": `${__dirname}/src/store`,
         },
         extensions: ["js"],

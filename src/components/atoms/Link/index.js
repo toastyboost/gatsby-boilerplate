@@ -1,14 +1,17 @@
-import React from "react";
+import * as React from "react";
 
-import { RouterLink, AnchorLink } from "./styles";
+import { RouterLink, ExternalLink } from "./styles";
 
-export const Link = ({ children, className, to }) =>
-  to.indexOf("#") !== -1 ? (
-    <RouterLink className={className} to={to} activeClassName="active">
+export const Link = ({ children, className, activeClassName, to, target, onClick }) => {
+  const internal = /^\/(?!\/)/.test(to);
+
+  return internal ? (
+    <RouterLink className={className} to={to} activeClassName={activeClassName} onClick={onClick}>
       {children}
     </RouterLink>
   ) : (
-    <AnchorLink className={className} to={to}>
+    <ExternalLink className={className} href={to} target={target} onClick={onClick}>
       {children}
-    </AnchorLink>
+    </ExternalLink>
   );
+};

@@ -1,8 +1,14 @@
 import styled from "styled-components";
-import { Link } from "~/components/atoms";
+import { Link, Anchor } from "~/components/atoms";
 
-export const MenuContainer = styled.div``;
+export const MenuContainer = styled.div`
+  display: flex;
+`;
 
 export const MenuLink = styled(Link)`
+  margin: 0 16px;
+`;
+
+export const AnchorLink = styled(Anchor)`
   margin: 0 16px;
 `;

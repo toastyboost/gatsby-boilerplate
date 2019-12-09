@@ -1,17 +1,28 @@
 import { css } from "styled-components";
+import { normalize } from "styled-normalize";
 
-import { Normalize } from "./normalize";
-import { AnimationStyles } from "./animations";
 import { FontsStyles } from "./fonts";
 
 const GlobalDefaults = css`
-  ${Normalize}
+  ${normalize}
   ${FontsStyles}
   
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
   :root {
     --main-font: "Roboto", sans-serif;
-    --text-font: "Merriweather", serif;
-    --text-color: rgba(0, 0, 0, 0.85);
+    --title-font: "Merriweather", serif;
+    --primary: #fff;
+    --secondary: #fff;
+    --warning: #fff;
+    --highlight: #f3f8fe;
+    --text-color: rgba(40, 46, 52, 0.8);
+    --text-color--secondary: rgba(56, 56, 56, 0.6);
     --title-color: rgba(0, 0, 0, 1);
     --link-active: #03a9f4;
     --link-hover: #2196f3;
@@ -21,6 +32,7 @@ const GlobalDefaults = css`
     --red: #ff4748;
     --green: #2e9e22;
     --blue: #157efb;
+    --box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.03);
   }
 
   body,
@@ -98,8 +110,6 @@ const GlobalDefaults = css`
   footer {
     font-size: 1.6rem;
   }
-
-  ${AnimationStyles}
 `;
 
 export default GlobalDefaults;

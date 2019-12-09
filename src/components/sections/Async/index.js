@@ -15,7 +15,6 @@ const Block = ({ getAllUsers, usersData }) => {
   }, []);
 
   const { data } = usersData;
-
   return (
     <AsyncContainer>
       <Wrapper>

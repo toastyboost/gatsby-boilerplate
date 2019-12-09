@@ -1,11 +1,14 @@
 {
+  "jsx": "react",
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "~/*": ["./src/*"],
       "~/components": ["src/components"],
       "~/static": ["src/static"],
       "~/styles": ["src/styles"],
-      "~/helpers": ["src/helpers"],
+      "~/libs": ["src/libs"],
       "~/store": ["src/store"]
     }
   }

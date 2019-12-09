@@ -1,26 +1,22 @@
-import { css } from "styled-components";
+import { keyframes } from "styled-components";
 
-const AnimationStyles = css`
-  @keyframes clockwise {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+export const clockwise = keyframes`
+  0% {
+    transform: rotate(0deg);
   }
-
-  @keyframes donut-rotate {
-    0% {
-      transform: rotate(0);
-    }
-    50% {
-      transform: rotate(-140deg);
-    }
-    100% {
-      transform: rotate(0);
-    }
+  100% {
+    transform: rotate(360deg);
   }
 `;
 
-export { AnimationStyles };
+export const donutRotate = keyframes`
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-140deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+`;

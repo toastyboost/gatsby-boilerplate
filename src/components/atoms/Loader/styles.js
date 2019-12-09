@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { donutRotate, clockwise } from "~/styles/animations";
 
 export const LoadContainer = styled.div`
   position: relative;
@@ -9,7 +10,7 @@ export const Load = styled.div`
   opacity: 0.75;
   width: 14px;
   height: 14px;
-  animation: clockwise 250ms linear infinite;
+  animation: ${clockwise} 250ms linear infinite;
   z-index: 1000;
   position: relative;
 `;
@@ -35,6 +36,6 @@ export const LoadShape = styled.div`
   top: 0;
   left: 0;
   margin: 0;
-  animation: donut-rotate 500ms cubic-bezier(0.4, 0, 0.22, 1) infinite;
+  animation: ${donutRotate} 500ms cubic-bezier(0.4, 0, 0.22, 1) infinite;
   z-index: 1002;
 `;

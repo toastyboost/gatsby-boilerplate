@@ -1,13 +1,18 @@
 import styled from "styled-components";
-import { Link as GatsbyLink } from "gatsby";
+import { Link } from "gatsby-plugin-intl";
 
-export const RouterLink = styled(GatsbyLink)`
-  display: inline-block;
-  color: var(--link-active);
+export const RouterLink = styled(Link)`
+  &:hover {
+    color: var(--link-hover);
+  }
 
+  &[aria-current="page"] {
+    color: var(--link-active);
+  }
+`;
+
+export const ExternalLink = styled.a`
   &:hover {
     color: var(--link-hover);
   }
 `;
-
-export const AnchorLink = styled.div``;

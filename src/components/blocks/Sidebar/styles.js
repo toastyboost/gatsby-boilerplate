@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 import { Burger } from "~/components/atoms";
-
-import { MEDIA, FixedBackground } from "~/styles/common";
+import { MEDIA } from "~/libs/media";
+import { FixedBackground } from "~/styles";
 
 export const AsideBackground = styled(FixedBackground)``;
 

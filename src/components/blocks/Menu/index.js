@@ -1,15 +1,18 @@
-import React from "react";
+import * as React from "react";
 
-import { MenuContainer, MenuLink } from "./styles";
+import { MenuContainer, MenuLink, AnchorLink } from "./styles";
 
 export const Menu = ({ className, data }) => {
   return (
     <MenuContainer className={className}>
-      {data.map(({ slug, caption }, key) => (
-        <MenuLink key={key} to={`/${slug}`}>
-          {caption}
-        </MenuLink>
-      ))}
+      {data.map(({ slug, caption }, key) => {
+        const linkProps = {
+          to: slug,
+          children: caption,
+          key,
+        };
+        return slug.indexOf("#") == 0 ? <AnchorLink {...linkProps} /> : <MenuLink {...linkProps} />;
+      })}
     </MenuContainer>
   );
 };

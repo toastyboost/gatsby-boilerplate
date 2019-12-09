@@ -1,8 +1,8 @@
-import React from "react";
+import * as React from "react";
 
-import { Translate } from "~/helpers";
+import { Translate } from "~/libs/translate";
 
-import { TextContainer, Wrapper, Title, Content, TextMerriweather, TextRoboto } from "./styles";
+import { TextContainer, Wrapper, Title, Content, TextMerriweather, TextRoboto, Scrollable } from "./styles";
 
 export const Fonts = () => {
   return (
@@ -25,6 +25,7 @@ export const Fonts = () => {
             time, the font features friendly and open curves.
           </TextRoboto>
         </Content>
+        <Scrollable />
       </Wrapper>
     </TextContainer>
   );

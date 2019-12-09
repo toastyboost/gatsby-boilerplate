@@ -8,8 +8,10 @@ export const setAllUsers = createAction("setAllUsers");
 // ASYNC ACTIONS
 
 export const getAllUsers = () => async dispatch => {
-  const res = await fetchUsers();
-  dispatch(setAllUsers({ ...res }));
+  const response = await fetchUsers();
+  const result = await response.json();
+
+  dispatch(setAllUsers({ ...result }));
 };
 
 const initialState = {};
@@ -20,7 +22,7 @@ export default handleActions(
       const { data } = payload;
 
       return {
-        ...data,
+        data,
       };
     },
   },

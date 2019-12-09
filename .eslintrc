@@ -6,7 +6,7 @@
     "es6": true
   },
   "rules": {
-    "max-len": [2, 120, 4],
+    "max-len": [2, 100, 4],
     "strict": 0,
     "no-console": "warn",
     "quotes": ["warn", "double"],
@@ -22,11 +22,7 @@
       }
     ]
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jsx-a11y/recommended"],
   "plugins": ["prettier", "jsx-a11y", "react"],
   "settings": {
     "react": {

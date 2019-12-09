@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-import { FixedBackground } from "~/styles/common";
+import { FixedBackground } from "~/styles";
 
-export const PopupBackground = styled(FixedBackground)``;
+export const PopupBackground = styled(FixedBackground)`
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const PopupWindow = styled.div`
-  top: auto;
-  height: auto;
-  position: relative;
   margin: 16px;
   width: calc(100% - 32px);
   border-radius: 3px;

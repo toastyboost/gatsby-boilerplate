@@ -15,7 +15,7 @@ yarn install && yarn start
 ⚛️ Redux (HOCs, Thunk, Logger)
 
 🔹 React Helmet  
-🔹 Localisation (react-intl)  
+🔹 Localization (react-intl)  
 🔹 Sitemap  
 🔹 Canonical urls
 
@@ -23,9 +23,9 @@ yarn install && yarn start
 🔸 Critical CSS  
 🔸 Favicons generator  
 🔸 CSS Normailize  
-🔸 Google / Static tpography
+🔸 Google/Static typography
 
-Prittier  
+Prettier  
 Eslint and workspace settings (jsx-a11y, react)
 
 No sourcemaps in build
@@ -33,11 +33,18 @@ Development/Production environments
 Atomic structure
 Examples
 
-# Problems
+# Begin
 
-Sometimes Gatsby build and develop processes stuck on createPagesStatefully stage. In this case just reload task.
+- [ ] Ask fonts
+- [ ] Ask favicon 512x512
+- [ ] Ask OG image
+
+# Acceptance checker
+
+- [ ] Check console errors
+- [ ] Compress static (svg, png, jpeg)
 
 # TODO
 
 Make Typography component  
-Resolve unpredictable build/develop process stuck
+Rebuild burger menu with maximize customization
