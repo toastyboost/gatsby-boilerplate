@@ -17,7 +17,7 @@ yarn install && yarn start
 🔹 React Helmet  
 🔹 Localization (react-intl)  
 🔹 Sitemap  
-🔹 Canonical urls
+🔹 Canonical url's
 
 🔸 Styled-components v5  
 🔸 Critical CSS  
@@ -39,7 +39,7 @@ Examples
 - [ ] Ask favicon 512x512
 - [ ] Ask OG image
 
-# Acceptance checker
+# Acceptance
 
 - [ ] Check console errors
 - [ ] Compress static (svg, png, jpeg)
@@ -47,4 +47,5 @@ Examples
 # TODO
 
 Make Typography component  
-Rebuild burger menu with maximize customization
+Rebuild burger menu with maximize customization  
+Prefix when upload to github
