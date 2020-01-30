@@ -166,6 +166,6 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/windows,linux,macos,node
 
-build
-public
-.cache
+build/
+public/
+.cache/

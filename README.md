@@ -46,6 +46,9 @@ Examples
 
 # TODO
 
+Optimize files structure
+Optimoze codes, var
 Make Typography component  
 Rebuild burger menu with maximize customization  
 Prefix when upload to github
+Update eslint.rc

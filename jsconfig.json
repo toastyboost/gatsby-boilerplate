@@ -5,7 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-      "~/components": ["src/components"],
+      "~/ui": ["src/ui"],
       "~/static": ["src/static"],
       "~/styles": ["src/styles"],
       "~/libs": ["src/libs"],

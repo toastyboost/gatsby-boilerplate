@@ -15,7 +15,8 @@
   "scripts": {
     "clean": "rm -rf public .cache",
     "start": "yarn clean && gatsby develop",
-    "build": "yarn clean && gatsby build"
+    "build": "yarn clean && gatsby build",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "click-outside-hook": "^1.1.0",
@@ -35,7 +36,6 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-redux": "^7.1.0",
-    "react-scroll-to-component": "^1.0.2",
     "redux": "^4.0.4",
     "redux-actions": "^2.6.5",
     "redux-thunk": "^2.3.0",
@@ -45,6 +45,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.2",
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-gatsby": "^0.2.27",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-standard": "^12.0.0",

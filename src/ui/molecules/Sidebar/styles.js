@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Burger } from "~/components/atoms";
+import { Burger } from "~/ui/atoms";
 import { MEDIA } from "~/libs/media";
 import { FixedBackground } from "~/styles";
 

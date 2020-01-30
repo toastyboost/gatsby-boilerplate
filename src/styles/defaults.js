@@ -1,12 +1,12 @@
-import { css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 
 import { FontsStyles } from "./fonts";
 
-const GlobalDefaults = css`
+export const GlobalStyles = createGlobalStyle`
   ${normalize}
   ${FontsStyles}
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -111,5 +111,3 @@ const GlobalDefaults = css`
     font-size: 1.6rem;
   }
 `;
-
-export default GlobalDefaults;

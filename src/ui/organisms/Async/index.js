@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { compose } from "redux";
 import { useDispatch } from "react-redux";
 
-import { Loader } from "~/components/atoms";
+import { Loader } from "~/ui/atoms";
 import { withUsers } from "~/store/hocs";
 
 import { AsyncContainer, Wrapper, Title, Content, ListItem } from "./styles";
@@ -15,6 +15,7 @@ const Block = ({ getAllUsers, usersData }) => {
   }, []);
 
   const { data } = usersData;
+
   return (
     <AsyncContainer>
       <Wrapper>

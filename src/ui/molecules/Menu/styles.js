@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link, Anchor } from "~/components/atoms";
+import { Link, Anchor } from "~/ui/atoms";
 
 export const MenuContainer = styled.div`
   display: flex;

@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Layout } from "~/components/templates";
+import { Layout } from "~/ui/templates";
 
-import { Fonts, Async, Seo } from "~/components/sections";
+import { Fonts, Async, Seo } from "~/ui/organisms";
 
 const seoProps = {
   title: "Main",

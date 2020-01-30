@@ -46,7 +46,7 @@ module.exports = {
       resolve: "gatsby-plugin-alias-imports",
       options: {
         alias: {
-          "~/components": `${__dirname}/src/components`,
+          "~/ui": `${__dirname}/src/ui`,
           "~/static": `${__dirname}/src/static`,
           "~/styles": `${__dirname}/src/styles`,
           "~/libs": `${__dirname}/src/libs`,
@@ -58,7 +58,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: null,
+        trackingId: 0,
       },
     },
     {

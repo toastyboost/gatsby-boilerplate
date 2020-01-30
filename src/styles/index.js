@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { MEDIA } from "~/libs/media";
 
+export { GlobalStyles } from "./defaults";
+
 export const Wrap = styled.div`
   width: 100%;
   margin: 0 auto;

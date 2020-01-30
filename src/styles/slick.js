@@ -1,8 +1,6 @@
 import { css } from "styled-components";
 
 export const SlickStyles = css`
-  /* slider */
-
   .slick-slider {
     position: relative;
     display: block;
@@ -85,8 +83,6 @@ export const SlickStyles = css`
   .slick-dots .slick-active button {
     background-color: transparent;
   }
-
-  /* arrows */
 
   .slick-arrow {
     position: absolute;

@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { Logo, Link } from "~/components/atoms";
-import { Menu, Popup } from "~/components/blocks";
+import { Logo, Link } from "~/ui/atoms";
+import { Menu, Popup } from "~/ui/molecules";
 import { HeaderContainer, Wrapper } from "./styles";
 
 const headerData = [
