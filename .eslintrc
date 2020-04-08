@@ -1,32 +1,39 @@
 {
-  "parser": "babel-eslint",
   "env": {
-    "browser": true,
     "node": true,
+    "browser": true,
+    "commonjs": true,
     "es6": true
   },
-  "rules": {
-    "max-len": [2, 100, 4],
-    "strict": 0,
-    "no-console": "warn",
-    "quotes": ["warn", "double"],
-    "prettier/prettier": "warn",
-    "react/prop-types": 0,
-    "no-unused-vars": "warn",
-    "react/display-name": 0,
-    "react/self-closing-comp": [
-      "error",
-      {
-        "component": true,
-        "html": true
-      }
-    ]
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "createDefaultProgram": true,
+    "tsconfigRootDir": "./"
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jsx-a11y/recommended"],
-  "plugins": ["prettier", "jsx-a11y", "react"],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "import/extensions": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/prop-types": "off"
   }
 }

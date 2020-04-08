@@ -18,6 +18,7 @@ module.exports = {
     "gatsby-plugin-no-sourcemaps",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-webpack-size",
+    "gatsby-plugin-typescript",
     {
       resolve: "gatsby-plugin-intl",
       options: {

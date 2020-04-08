@@ -10,8 +10,8 @@ export const Link = ({ children, className, activeClassName, to, target, onClick
       {children}
     </RouterLink>
   ) : (
-    <ExternalLink className={className} href={to} target={target} onClick={onClick}>
-      {children}
-    </ExternalLink>
-  );
+      <ExternalLink className={className} href={to} target={target} onClick={onClick}>
+        {children}
+      </ExternalLink>
+    );
 };
