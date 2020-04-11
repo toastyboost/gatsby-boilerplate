@@ -2,10 +2,16 @@ import * as React from "react";
 
 import { AnchorLink } from "./styles";
 
-export const Anchor = ({ children, className, to }) => {
+type AnchorProps = {
+  className?: string;
+  to?: string;
+}
+
+export const Anchor: React.FC<AnchorProps> = ({ children, className, to }) => {
   const handleClick = () => {
+    if (!to) return false;
     const ref = document.querySelector(to);
-    ref.scrollIntoView({ block: "center", behavior: "smooth" });
+    ref && ref.scrollIntoView({ block: "center", behavior: "smooth" });
   };
 
   return (

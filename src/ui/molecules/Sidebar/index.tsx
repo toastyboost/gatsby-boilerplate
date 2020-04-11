@@ -9,10 +9,16 @@ import {
   AsideContent,
 } from "./styles";
 
-export const Sidebar = ({ className, isVisible, toggler }) => {
+type SidebarProps = {
+  className?: string;
+  isVisible: boolean;
+  toggler: (value: boolean) => boolean;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ className, isVisible, toggler }) => {
   return (
     <>
-      <AsideBackground isVisible={isVisible} className={className} onClick={() => toggler(!isVisible)} />
+      <AsideBackground aria-visible={isVisible} className={className} onClick={() => toggler(!isVisible)} />
       <Aside isVisible={isVisible}>
         <AsideHeader>
           <AsideBurger isVisible={isVisible} onClick={() => toggler(!isVisible)} />

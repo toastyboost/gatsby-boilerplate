@@ -1,6 +1,12 @@
-import { css } from "styled-components";
+import { css, FlattenSimpleInterpolation, CSSObject } from "styled-components";
 
 import { BREAKPOINTS } from "~/libs/constants";
+
+type MediaObject = {
+  [T in keyof typeof BREAKPOINTS]: (
+    props: TemplateStringsArray | CSSObject
+  ) => FlattenSimpleInterpolation;
+};
 
 const defaults = {
   DESKTOP: () => css``,
@@ -9,11 +15,15 @@ const defaults = {
   PHONE: () => css``,
 };
 
-export const MEDIA = Object.keys(BREAKPOINTS).reduce((acc, label) => {
-  acc[label] = props => css`
-    @media (min-width: ${BREAKPOINTS[label] / 16}em) {
-      ${css(props)};
-    }
-  `;
-  return acc;
-}, defaults);
+export const MEDIA = (Object.keys(BREAKPOINTS) as (keyof typeof BREAKPOINTS)[]).reduce<MediaObject>(
+  (accumulator, label: keyof typeof BREAKPOINTS) => {
+    const relativeEmToPxRatio = 16;
+    accumulator[label] = (properties) => css`
+      @media (min-width: ${BREAKPOINTS[label] / relativeEmToPxRatio}em) {
+        ${css(properties)};
+      }
+    `;
+    return accumulator;
+  },
+  defaults
+);

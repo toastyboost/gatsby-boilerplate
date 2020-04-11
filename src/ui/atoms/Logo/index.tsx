@@ -5,7 +5,11 @@ import { LogoContainer, LogoImg } from "./styles";
 
 import LogoSVG from "~/static/logo.svg";
 
-export const Logo = ({ className }) => (
+type LogoPrrops = {
+  className?: string;
+}
+
+export const Logo: React.FC<LogoPrrops> = ({ className }) => (
   <LogoContainer className={className}>
     <Link to="/">
       <LogoImg src={LogoSVG} />

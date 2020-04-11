@@ -22,10 +22,10 @@ export const StyledBurgerBox = styled.div`
   position: relative;
 `;
 
-export const StyledBurgerInner = styled.div`
+export const StyledBurgerInner = styled.div<{ isActive: boolean }>`
   display: block;
   top: 50%;
-  transform: ${p => (p.isActive ? "rotate(-45deg)" : "rotate(0deg)")};
+  transform: ${(p) => (p.isActive ? "rotate(-45deg)" : "rotate(0deg)")};
   width: ${width}px;
   height: ${height}px;
   background-color: ${theme};
@@ -51,13 +51,13 @@ export const StyledBurgerInner = styled.div`
   &:before {
     transition: 0.1s linear;
     transition: 0;
-    top: ${p => (p.isActive ? 0 : "-8px")};
-    opacity: ${p => (p.isActive ? 0 : 1)};
+    top: ${(p) => (p.isActive ? 0 : "-8px")};
+    opacity: ${(p) => (p.isActive ? 0 : 1)};
   }
 
   &:after {
-    bottom: ${p => (p.isActive ? 0 : "-8px")};
-    transform: ${p => (p.isActive ? "rotate(90deg)" : "rotate(0)")};
+    bottom: ${(p) => (p.isActive ? 0 : "-8px")};
+    transform: ${(p) => (p.isActive ? "rotate(90deg)" : "rotate(0)")};
     transition: 0.2s ease-in-out;
   }
 `;

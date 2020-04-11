@@ -6,10 +6,10 @@ import { FixedBackground } from "~/styles";
 
 export const AsideBackground = styled(FixedBackground)``;
 
-export const Aside = styled.aside`
-  opacity: ${p => (p.isVisible ? "1" : "0")};
-  visibility: ${p => (p.isVisible ? "inherit" : "hidden")};
-  transform: translateX(${p => (p.isVisible ? "0" : "-300px")});
+export const Aside = styled.aside<{ isVisible: boolean }>`
+  opacity: ${(p) => (p.isVisible ? "1" : "0")};
+  visibility: ${(p) => (p.isVisible ? "inherit" : "hidden")};
+  transform: translateX(${(p) => (p.isVisible ? "0" : "-300px")});
   position: fixed;
   left: 0;
   top: 0;

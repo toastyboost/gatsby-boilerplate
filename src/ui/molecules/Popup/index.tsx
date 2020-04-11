@@ -4,11 +4,25 @@ import isClickedOutside from "click-outside-hook";
 
 import { PopupBackground, PopupWindow, CloseButton } from "./styles";
 
-const Portal = ({ children }) =>
-  typeof document !== "undefined" && ReactDOM.createPortal(children, document.getElementById("___gatsby"));
+const Portal: React.FC = ({ children }): any => {
+  if (typeof document !== "undefined") {
+    const el = document.getElementById("___gatsby");
+    if (typeof el !== 'object') {
+      return ReactDOM.createPortal(children, el);
+    }
+  }
 
-export const Popup = ({ children, toggle, isOpen, closeInside }) => {
-  const ref = isClickedOutside(() => toggle(true));
+  return null
+}
+
+type PopupProps = {
+  toggle: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  closeInside?: boolean;
+}
+
+export const Popup: React.FC<PopupProps> = ({ children, toggle, isOpen, closeInside }) => {
+  const ref: any = isClickedOutside(() => toggle(true));
 
   React.useEffect(() => {
     document.body.style.overflow = isOpen ? "inherit" : "hidden";

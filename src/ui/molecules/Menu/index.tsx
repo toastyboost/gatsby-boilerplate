@@ -2,7 +2,12 @@ import * as React from "react";
 
 import { MenuContainer, MenuLink, AnchorLink } from "./styles";
 
-export const Menu = ({ className, data }) => {
+type MenuProps = {
+  className?: string;
+  data: { slug: string; caption: string }[];
+}
+
+export const Menu: React.FC<MenuProps> = ({ className, data }) => {
   return (
     <MenuContainer className={className}>
       {data.map(({ slug, caption }, key) => {
@@ -11,7 +16,7 @@ export const Menu = ({ className, data }) => {
           children: caption,
           key,
         };
-        return slug.indexOf("#") == 0 ? <AnchorLink {...linkProps} /> : <MenuLink {...linkProps} />;
+        return slug.includes("#") ? <AnchorLink {...linkProps} /> : <MenuLink {...linkProps} />;
       })}
     </MenuContainer>
   );

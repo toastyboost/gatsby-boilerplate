@@ -7,7 +7,14 @@ import { withUsers } from "~/store/hocs";
 
 import { AsyncContainer, Wrapper, Title, Content, ListItem } from "./styles";
 
-const Block = ({ getAllUsers, usersData }) => {
+type BlockProps = {
+  getAllUsers: any;
+  usersData: {
+    data: { email: string }[];
+  };
+}
+
+const Block: React.FC<BlockProps> = ({ getAllUsers, usersData }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,12 +38,12 @@ const Block = ({ getAllUsers, usersData }) => {
               </ListItem>
             ))
           ) : (
-            <Loader />
-          )}
+              <Loader />
+            )}
         </Content>
       </Wrapper>
     </AsyncContainer>
   );
 };
 
-export const Async = compose(withUsers)(Block);
+export const Async = compose(withUsers)(Block as any);

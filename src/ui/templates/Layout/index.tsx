@@ -5,7 +5,7 @@ import { GlobalStyles } from "~/styles";
 
 import { Main } from "./styles";
 
-export const Layout = ({ children }) => (
+export const Layout: React.FC = ({ children }) => (
   <>
     <GlobalStyles />
     <>

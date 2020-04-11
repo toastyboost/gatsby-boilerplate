@@ -34,7 +34,12 @@ const closeStyles = `
   height: 0;
 `;
 
-export const CloseButton = styled.div`
+type CloseButtonProps = {
+  isFullscreen?: boolean;
+  isInside?: boolean;
+};
+
+export const CloseButton = styled.div<CloseButtonProps>`
   position: absolute;
   z-index: 1002;
   height: 25px;
@@ -68,7 +73,7 @@ export const CloseButton = styled.div`
         right: -2px;
         top: -36px;
         opacity: 0.7;
-        
+
         &:before,
         &:after {
           border-top: 2px solid #fff;

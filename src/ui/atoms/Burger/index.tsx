@@ -2,9 +2,12 @@ import * as React from "react";
 
 import { StyledBurgerContainer, StyledBurgerBox, StyledBurgerInner } from "./styles";
 
-export const Burger = ({ className, ...props }) => {
-  const { isVisible, onClick } = props;
-
+type BurgerProps = {
+  className?: string;
+  isVisible: boolean;
+  onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
+}
+export const Burger: React.FC<BurgerProps> = ({ className, isVisible, onClick }) => {
   return (
     <StyledBurgerContainer className={className} onClick={onClick}>
       <StyledBurgerBox>

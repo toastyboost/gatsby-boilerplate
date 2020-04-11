@@ -30,7 +30,8 @@
       {
         "extensions": [
           ".ts",
-          ".tsx"
+          ".tsx",
+          ".svg"
         ]
       }
     ],
