@@ -44,6 +44,11 @@ Examples
 - [ ] Check console errors
 - [ ] Compress static (svg, png, jpeg)
 
+## Troubleshooting
+
+if yarn update broke download dependencies from NPM through YARN
+`yarn --registry https://registry.npmjs.org`
+
 # TODO
 
 Optimize files structure
