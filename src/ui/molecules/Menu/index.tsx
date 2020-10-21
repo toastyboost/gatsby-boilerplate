@@ -5,7 +5,7 @@ import { MenuContainer, MenuLink, AnchorLink } from "./styles";
 type MenuProps = {
   className?: string;
   data: { slug: string; caption: string }[];
-}
+};
 
 export const Menu: React.FC<MenuProps> = ({ className, data }) => {
   return (

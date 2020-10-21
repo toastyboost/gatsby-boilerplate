@@ -3,7 +3,15 @@ import { Helmet } from "react-helmet";
 
 const site = process.env.WEBSITE_URL;
 
-const Seo = ({ lang = "en", title = "", desc = "", keywords = "", image = "" }) => (
+type SeoProps = {
+  lang?: string;
+  title?: string;
+  desc?: string;
+  keywords?: string;
+  image?: string;
+};
+
+const Seo = ({ lang = "en", title = "", desc = "", keywords = "", image = "" }: SeoProps) => (
   <Helmet>
     <html lang={lang} />
     <title>{title}</title>

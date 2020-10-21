@@ -59,7 +59,7 @@ export const CloseButton = styled.div<CloseButtonProps>`
         }
         `
       : isInside
-      ? `
+        ? `
         opacity: 0.15;
         right: 25px;
         top: 25px;
@@ -69,7 +69,7 @@ export const CloseButton = styled.div<CloseButtonProps>`
           border-top: 3px solid var(--text-color);
         }
       `
-      : `
+        : `
         right: -2px;
         top: -36px;
         opacity: 0.7;

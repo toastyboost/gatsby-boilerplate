@@ -7,7 +7,7 @@ type InputProps = {
   placeholder: string;
   isInvalid: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
+};
 
 export const Input: React.FC<InputProps> = ({ value, placeholder, isInvalid, onChange }) => (
   <FieldContainer>

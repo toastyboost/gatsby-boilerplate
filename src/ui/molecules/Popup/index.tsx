@@ -7,19 +7,19 @@ import { PopupBackground, PopupWindow, CloseButton } from "./styles";
 const Portal: React.FC = ({ children }): any => {
   if (typeof document !== "undefined") {
     const el = document.getElementById("___gatsby");
-    if (typeof el !== 'object') {
+    if (typeof el !== "object") {
       return ReactDOM.createPortal(children, el);
     }
   }
 
-  return null
-}
+  return null;
+};
 
 type PopupProps = {
   toggle: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
   closeInside?: boolean;
-}
+};
 
 export const Popup: React.FC<PopupProps> = ({ children, toggle, isOpen, closeInside }) => {
   const ref: any = isClickedOutside(() => toggle(true));

@@ -6,7 +6,8 @@ type BurgerProps = {
   className?: string;
   isVisible: boolean;
   onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
-}
+};
+
 export const Burger: React.FC<BurgerProps> = ({ className, isVisible, onClick }) => {
   return (
     <StyledBurgerContainer className={className} onClick={onClick}>
