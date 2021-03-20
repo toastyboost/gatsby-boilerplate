@@ -1,17 +1,14 @@
 import * as React from "react";
+import styled from "styled-components";
 
-import { Header, Footer } from "~/ui/organisms";
-import { GlobalStyles } from "~/styles";
-
-import { Main } from "./styles";
+import { Header, Footer } from "src/ui/organisms";
 
 export const Layout: React.FC = ({ children }) => (
   <>
-    <GlobalStyles />
-    <>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
-    </>
+    <Header />
+    <Main>{children}</Main>
+    <Footer />
   </>
 );
+
+const Main = styled.main``;

@@ -1,6 +1,6 @@
 import { css, FlattenSimpleInterpolation, CSSObject } from "styled-components";
 
-import { BREAKPOINTS } from "~/libs/constants";
+import { BREAKPOINTS } from "src/libs/constants";
 
 type MediaObject = {
   [T in keyof typeof BREAKPOINTS]: (

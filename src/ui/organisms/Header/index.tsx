@@ -1,8 +1,8 @@
 import * as React from "react";
+import styled from "styled-components";
 
-import { Logo, Link } from "~/ui/atoms";
-import { Menu, Popup } from "~/ui/molecules";
-import { HeaderContainer, Wrapper } from "./styles";
+import { Logo } from "src/ui/atoms";
+import { Menu } from "src/ui/molecules";
 
 const headerData = [
   {
@@ -15,21 +15,23 @@ const headerData = [
   },
 ];
 
-const Header = () => {
-  const [isHidden, setVisibility] = React.useState(true);
-
+export const Header = () => {
   return (
     <HeaderContainer>
       <Wrapper>
         <Logo />
         <Menu data={headerData} />
-        <Link onClick={() => setVisibility(!isHidden)}>Popup Window</Link>
       </Wrapper>
-      <Popup isOpen={isHidden} toggle={setVisibility}>
-        Popup Content
-      </Popup>
     </HeaderContainer>
   );
 };
 
-export { Header };
+const HeaderContainer = styled.header`
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 12px;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;

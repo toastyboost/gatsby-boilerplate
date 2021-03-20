@@ -4,12 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "~/ui": ["src/ui"],
-      "~/static": ["src/static"],
-      "~/styles": ["src/styles"],
-      "~/libs": ["src/libs"],
-      "~/store": ["src/store"]
+      "src/*": ["./src/*"],
     }
   }
 }

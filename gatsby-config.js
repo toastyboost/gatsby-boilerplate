@@ -4,7 +4,10 @@ dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const siteUrl = process.env.WEBSITE_URL;
+const siteUrl =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8000"
+    : "${siteUrl}";
 
 module.exports = {
   siteMetadata: {
@@ -19,7 +22,12 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-no-sourcemaps",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-webpack-size",
+    {
+      resolve: "gatsby-plugin-react-helmet-canonical-urls",
+      options: {
+        siteUrl,
+      },
+    },
     {
       resolve: "gatsby-plugin-intl",
       options: {
@@ -37,6 +45,36 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-alias-imports",
+      options: {
+        alias: {
+          "src/ui": `${__dirname}/src/ui`,
+        },
+        extensions: [".ts", ".tsx"],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "JetBrains Mono",
+              variants: [`400`, `700`, `900`],
+              subsets: ['latin', 'cyrillic'],
+              strategy: 'selfHosted'
+            },
+            {
+              family: "Roboto",
+              variants: [`400`, `700`],
+              subsets: ['latin', 'cyrillic'],
+              strategy: 'selfHosted'
+            },
+          ],
+        },
+      }
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: siteUrl,
@@ -45,56 +83,21 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-alias-imports",
-      options: {
-        alias: {
-          "~/ui": `${__dirname}/src/ui`,
-          "~/static": `${__dirname}/src/static`,
-          "~/styles": `${__dirname}/src/styles`,
-          "~/libs": `${__dirname}/src/libs`,
-          "~/store": `${__dirname}/src/store`,
-        },
-        extensions: ["js"],
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: 0,
+        trackingId: '0',
       },
     },
     {
-      resolve: "gatsby-plugin-react-helmet-canonical-urls",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        siteUrl,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-favicon",
-      options: {
-        logo: "./src/static/favicon.png",
-        appName: siteUrl,
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
-        dir: "auto",
-        lang: "en",
-        background: "#2c52da",
+        name: "{siteName}",
+        short_name: "{siteShortName}",
+        start_url: `en/`,
+        background_color: "#2c52da",
         theme_color: "#2c52da",
         display: "standalone",
-        orientation: "any",
-        start_url: "/",
-        version: "1.0",
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: false,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          yandex: false,
-          windows: false,
-        },
+        icon: "static/favicon.png",
       },
     },
   ],

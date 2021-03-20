@@ -28,32 +28,13 @@
     "typeRoots": [
       "./node_modules/@types"
     ],
-    "paths": {
-      "~/*": [
-        "src/*"
-      ],
-      "~/ui": [
-        "src/ui"
-      ],
-      "~/static": [
-        "src/static"
-      ],
-      "~/styles": [
-        "src/styles"
-      ],
-      "~/libs": [
-        "src/libs"
-      ],
-      "~/store": [
-        "src/store"
-      ]
-    }
   },
   "exclude": [
     "./node_modules",
     "./public",
   ],
   "include": [
-    "src"
+    "src",
+    "static"
   ]
 }

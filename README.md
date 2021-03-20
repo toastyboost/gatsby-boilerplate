@@ -11,8 +11,7 @@ yarn install && yarn start
 
 # Features
 
-🚀 React 16 (Functional components + Hooks)  
-⚛️ Redux (HOCs, Thunk, Logger)
+🚀 React 16 (Functional components + Hooks)
 
 🔹 React Helmet  
 🔹 Localization (react-intl)  
@@ -20,7 +19,6 @@ yarn install && yarn start
 🔹 Canonical url's
 
 🔸 Styled-components v5  
-🔸 Critical CSS  
 🔸 Favicons generator  
 🔸 CSS Normailize  
 🔸 Google/Static typography

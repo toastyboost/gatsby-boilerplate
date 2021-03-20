@@ -1,9 +1,13 @@
 import * as React from "react";
-
-import { Container } from "./styles";
+import styled from "styled-components";
 
 const todayYear = new Date().getFullYear();
 
 export const Footer = () => {
-  return <Container id="footer">© 2013 – {todayYear}</Container>;
+  return <FooterContainer id="footer">© 2013 – {todayYear}</FooterContainer>;
 };
+
+const FooterContainer = styled.footer`
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 12px;
+`;

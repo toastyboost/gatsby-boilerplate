@@ -1,12 +1,31 @@
-// const React = require("react");
-// const GlobalStyles = require("./src/styles/defaults");
+import * as React from "react";
+ 
+import {
+  ServerStyleSheet,
+  StyleSheetManager
+} from "styled-components";
 
-// export const onRenderBody = ({ setHeadComponents }) => {
-//   const str = GlobalStyles.default.join("");
+const sheetByPathname = new Map();
 
-//   setHeadComponents([
-//     <style key="global-styles" type="text/css" dangerouslySetInnerHTML={{ __html: str }} />,
-//   ]);
-// };
+export const wrapRootElement = ({ element, pathname }) => {
+  const sheet = new ServerStyleSheet();
+  sheetByPathname.set(pathname, sheet);
+  return (
+    <>
+      <StyleSheetManager sheet={sheet.instance}>
+        {element}
+      </StyleSheetManager> 
+    </>
+  );
+};
 
-export { default as wrapRootElement } from "./src/store/ReduxWrapper";
+export const onRenderBody = ({
+  setHeadComponents,
+  pathname
+}) => {
+  const sheet = sheetByPathname.get(pathname);
+  if (sheet) {
+    setHeadComponents([sheet.getStyleElement()]);
+    sheetByPathname.delete(pathname);
+  }
+};

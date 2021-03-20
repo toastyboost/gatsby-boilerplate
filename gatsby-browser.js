@@ -1,1 +1,2 @@
-export { default as wrapRootElement } from "./src/store/ReduxWrapper";
+import "./src/styles/normalize.css"
+import "./src/styles/default.css"
