@@ -1,57 +1,34 @@
-# 🐣 Gatsby Boilerplate
+# 🐣 Gatsby typescript started
 
-Gatsby Boilerplate with latest (2k19) tehnologies. Usefull for: Landings, Static promo websites, MVP prototypes
+- Landings
+- Static websites
 
-# Getting started
+## Features
 
-```
-gatsby new https://github.com/toastyboost/gatsby-boilerplate
-yarn install && yarn start
-```
+- Gatsby v4
+- React 18
+- TypeScript
+- Prettier
 
-# Features
+## Commands
 
-🚀 React 16 (Functional components + Hooks)
+- develop
+- start 
+- build 
+- serve 
+- clean
 
-🔹 React Helmet  
-🔹 Localization (react-intl)  
-🔹 Sitemap  
-🔹 Canonical url's
+## Plugins
 
-🔸 Styled-components v5  
-🔸 Favicons generator  
-🔸 CSS Normailize  
-🔸 Google/Static typography
+- gatsby-plugin-web-font-loader
+- gatsby-plugin-manifest
+- gatsby-plugin-react-helmet
+- gatsby-plugin-sitemap
+- gatsby-plugin-sharp
+- gatsby-transformer-sharp
 
-Prettier  
-Eslint and workspace settings (jsx-a11y, react)
+## todo
 
-No sourcemaps in build
-Development/Production environments  
-Atomic structure
-Examples
-
-# Begin
-
-- [ ] Ask fonts
-- [ ] Ask favicon 512x512
-- [ ] Ask OG image
-
-# Acceptance
-
-- [ ] Check console errors
-- [ ] Compress static (svg, png, jpeg)
-
-## Troubleshooting
-
-if yarn update broke download dependencies from NPM through YARN
-`yarn --registry https://registry.npmjs.org`
-
-# TODO
-
-Optimize files structure
-Optimoze codes, var
-Make Typography component  
-Rebuild burger menu with maximize customization  
-Prefix when upload to github
-Update eslint.rc
+- i18n
+- basic components
+- sort imports

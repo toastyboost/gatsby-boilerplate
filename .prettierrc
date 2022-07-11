@@ -1,8 +1,8 @@
 {
-  "printWidth": 80,
-  "singleQuote": false,
-  "trailingComma": "es5",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "semi": true
+  "parser" : "typescript",
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "plugins": ["./node_modules/prettier-plugin-import-sort"]
 }

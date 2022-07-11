@@ -6,24 +6,30 @@
 }
 
 :root {
-  --primary-font: "Roboto", sans-serif;
-  --secondary-font: "JetBrains Mono", monospace;
+  --font--primary: "Roboto", sans-serif;
+  --font--secondary: "JetBrains Mono", monospace;
+
   --text-font: "PT Serif", Georgia, serif;
-  --primary: var(--purple);
-  --secondary: #fff;
+  --text-width: 710px;
+  --text-color: rgba(40, 46, 52, 0.8);
+  --text-color--secondary: rgba(56, 56, 56, 0.6);
+
+  --link-color: #000;
+  --link-color--active: #fff;
+  --link-color--hover: rgba(255, 255, 255, 0.75);
+
+  --primary-color: var(--purple);
+  --secondary-color: #fff;
   --green: rgb(104 255 62);
   --purple: rgb(146, 84, 222);
   --orange: rgb(255, 119, 0);
-  --text-color: rgba(40, 46, 52, 0.8);
-  --text-color--secondary: rgba(56, 56, 56, 0.6);
-  --link-active: #fff;
-  --link-hover: rgba(255, 255, 255, 0.75);
+
   --border-color: rgba(255, 255, 255, 0.07);
   --body-bg: #fff;
   --block-bg: #fff;
   --box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.03);
   --menu-width: 82px;
-  --text-width: 710px;
+ 
 }
 
 body,

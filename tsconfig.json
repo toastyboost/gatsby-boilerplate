@@ -1,40 +1,36 @@
 {
   "compilerOptions": {
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "react",
+    "target": "esnext",
     "lib": [
       "dom",
-      "dom.iterable",
       "esnext"
     ],
-    "module": "esnext",
-    "noEmit": false,
+    "jsx": "react",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "target": "es6",
-    "declaration": true,
-    "declarationDir": "./public",
     "baseUrl": ".",
-    "rootDirs": [
-      "./src"
-    ],
-    "outDir": "./public",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/static/*": [
+        "./static/*"
+      ],
+    },
   },
-  "exclude": [
-    "./node_modules",
-    "./public",
-  ],
   "include": [
-    "src",
-    "static"
+    "./src",
+    "./src/**/*",
+    "./gatsby-browser.ts",
+    "./gatsby-config.ts",
+    "./gatsby-node.ts",
+    "./gatsby-ssr.ts",
+    "./plugins/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

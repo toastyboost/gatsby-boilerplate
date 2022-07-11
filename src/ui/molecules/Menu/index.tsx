@@ -1,27 +1,26 @@
-import * as React from "react";
-import styled from "styled-components";
-
-import { Link } from "src/ui/atoms";
+import { Link } from '@/ui/atoms'
+import * as React from 'react'
+import styled from 'styled-components'
 
 type MenuProps = {
-  className?: string;
-  data: { slug: string; caption: string }[];
-};
+  className?: string
+  items: { slug: string; caption: string }[]
+}
 
-export const Menu: React.FC<MenuProps> = ({ className, data }) => {
+export const Menu = ({ className, items }: MenuProps) => {
   return (
     <MenuContainer className={className}>
-      {data.map(({ slug, caption }, key) => {
-        return <MenuLink key={key} to={slug} children={caption} />;
+      {items.map(({ slug, caption }, key) => {
+        return <MenuLink key={key} to={slug} children={caption} />
       })}
     </MenuContainer>
-  );
-};
+  )
+}
 
 const MenuContainer = styled.div`
   display: flex;
-`;
+`
 
 const MenuLink = styled(Link)`
   margin: 0 16px;
-`;
+`

@@ -1,35 +1,39 @@
-import * as React from "react";
-import styled from "styled-components";
-import { Link as GatsbyLink } from "gatsby-plugin-intl";
+import { Link as GatsbyLink } from 'gatsby'
+import * as React from 'react'
+import styled from 'styled-components'
 
 type LinkProps = {
-  className?: string;
-  activeClassName?: string;
-  to?: string;
-  target?: string;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-};
+  children?: React.ReactNode
+  className?: string
+  activeClassName?: string
+  to?: string
+  target?: string
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
+}
 
-export const Link: React.FC<LinkProps> = ({
+export const Link = ({
   children,
   className,
-  activeClassName,
-  to = "",
+  activeClassName = 'active',
+  to = '',
   target,
   onClick,
-}) => {
-  const internal = to && /^\/(?!\/)/.test(to);
+}: LinkProps) => {
+  const isInternal = to && /^\/(?!\/)/.test(to)
 
-  return internal ? (
-    <RouterLink
-      className={className}
-      to={to}
-      activeClassName={activeClassName}
-      onClick={onClick}
-    >
-      {children}
-    </RouterLink>
-  ) : (
+  if (isInternal) {
+    return (
+      <RouterLink
+        className={className}
+        to={to}
+        activeClassName={activeClassName}
+        onClick={onClick}
+      >
+        {children}
+      </RouterLink>
+    )
+  }
+  return (
     <ExternalLink
       className={className}
       href={to}
@@ -38,21 +42,25 @@ export const Link: React.FC<LinkProps> = ({
     >
       {children}
     </ExternalLink>
-  );
-};
+  )
+}
 
 const RouterLink = styled(GatsbyLink)`
+  color: var(--link-color);
+
   &:hover {
-    color: var(--link-hover);
+    color: var(--link-color--hover);
   }
 
-  &[aria-current="page"] {
-    color: var(--link-active);
+  &[aria-current='page'] {
+    color: var(--link-color--active);
   }
-`;
+`
 
 const ExternalLink = styled.a`
+  color: var(--link-color);
+
   &:hover {
-    color: var(--link-hover);
+    color: var(--link-color--hover);
   }
-`;
+`

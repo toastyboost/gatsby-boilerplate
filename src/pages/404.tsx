@@ -1,9 +1,9 @@
-import * as React from "react";
+import * as React from 'react'
 
-const ErrorPage: React.FC = () => (
-  <>
-    <h1>Not Found</h1>
-  </>
-);
-
-export default ErrorPage;
+export default () => {
+  return (
+    <main>
+      <title>Not found</title>
+    </main>
+  )
+}
