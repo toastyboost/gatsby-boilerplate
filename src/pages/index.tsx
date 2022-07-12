@@ -7,7 +7,7 @@ export default () => {
   return (
     <GenericLayout>
       <Seo />
-      <Text translateId="description" />
+      <Text translateId="content" />
     </GenericLayout>
   )
 }
