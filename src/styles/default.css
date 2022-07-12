@@ -10,7 +10,9 @@
   --font--secondary: "JetBrains Mono", monospace;
 
   --text-font: "PT Serif", Georgia, serif;
+  --text-size: 18px;
   --text-width: 710px;
+  --text-line-height: 1.6;
   --text-color: rgba(40, 46, 52, 0.8);
   --text-color--secondary: rgba(56, 56, 56, 0.6);
 
@@ -28,13 +30,12 @@
   --body-bg: #fff;
   --block-bg: #fff;
   --box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.03);
-  --menu-width: 82px;
- 
+  --menu-height: 40px;
 }
 
 body,
 html {
-  font-family: var(--primary-font);
+  font-family: var(--font--primary);
   color: var(--text-color);
   background-color: var(--body-bg);
   font-size: 62.5%;

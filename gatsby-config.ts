@@ -1,18 +1,16 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title: `Gatsby Starter`,
-    siteUrl: `https://www.yourdomain.tld`
-  },
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        google: {
-          families: ['JetBrains Mono:400,700', 'Roboto:400,700,900']
-        }
+        fonts: [
+          `JetBrains Mono\:400,700`,
+          `Roboto:400,700,900`
+        ],
+        display: 'swap'
       }
     },
     {
@@ -28,6 +26,17 @@ const config: GatsbyConfig = {
         "path": "./src/images/"
       },
       __key: "images"
+    },
+    {
+      resolve: "gatsby-plugin-react-intl",
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: ["en", "de"],
+        defaultLanguage: "en",
+        fallbackLanguage: "en",
+        redirect: true,
+        redirectDefaultLanguageToRoot: false,
+      },
     },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",

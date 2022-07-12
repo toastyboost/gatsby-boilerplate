@@ -1,44 +1,19 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-react-intl'
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
-type SeoProps = {
-  lang?: string
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-}
+export const Seo = () => {
+  const intl = useIntl()
 
-const Seo = ({
-  lang = 'en',
-  title = '',
-  description = '',
-  keywords = '',
-  image = '',
-}: SeoProps) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
-      }
-    `,
-  )
+  const title = intl.formatMessage({ id: 'title' })
+  const description = intl.formatMessage({ id: 'description' })
 
   return (
     <Helmet>
-      <html lang={lang} />
-      <title>{site.siteMetadata?.title}</title>
-      <meta
-        name="description"
-        content={description || site.siteMetadata.description}
-      />
-      <meta name="keywords" content={keywords} />
+      <html lang={intl.locale} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
       <meta
@@ -58,18 +33,6 @@ const Seo = ({
         name="apple-mobile-web-app-status-bar-style"
         content="black-translucent"
       />
-
-      <meta property="og:title" content={title} />
-      <meta
-        property="og:description"
-        content={description || site.siteMetadata.description}
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={site} />
-      <meta property="og:image" content={`${site}/${image}`} />
-      <meta property="og:image:height" content="600" />
-      <meta property="og:image:width" content="315" />
     </Helmet>
   )
 }
-export { Seo }

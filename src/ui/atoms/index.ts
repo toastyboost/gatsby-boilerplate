@@ -1,2 +1,6 @@
 export { Link } from "./link"
 export { Logo } from "./logo"
+export { Text } from "./text"
+export { Title } from "./title"
+export { Translate } from "./translate"
+export { Container } from "./container"

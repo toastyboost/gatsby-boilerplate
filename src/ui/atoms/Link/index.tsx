@@ -1,4 +1,4 @@
-import { Link as GatsbyLink } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby-plugin-react-intl'
 import * as React from 'react'
 import styled from 'styled-components'
 

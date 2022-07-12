@@ -20,6 +20,9 @@
 
 ## Plugins
 
+### Gatsby
+
+- gatsby-plugin-react-intl
 - gatsby-plugin-web-font-loader
 - gatsby-plugin-manifest
 - gatsby-plugin-react-helmet
@@ -27,8 +30,22 @@
 - gatsby-plugin-sharp
 - gatsby-transformer-sharp
 
+### React
+
+- styled-breakpoints
+
+```
+const defaultBreakpoints = {
+  xs: '0px',
+  sm: '576px',
+  md: '768px',
+  lg: '992px',
+  xl: '1200px',
+  xxl: '1400px',
+};
+```
+
 ## todo
 
-- i18n
 - basic components
 - sort imports
