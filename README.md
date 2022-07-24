@@ -10,6 +10,8 @@
 - TypeScript
 - Prettier
 
+- Critical CSS
+
 ## Commands
 
 - develop
