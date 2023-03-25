@@ -1,53 +1,49 @@
-# 🐣 Gatsby typescript started
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby Minimal TypeScript Starter
+</h1>
 
-- Landings
-- Static websites
+## 🚀 Quick start
 
-## Features
+1.  **Create a Gatsby site.**
 
-- Gatsby v4
-- React 18
-- TypeScript
-- Prettier
+    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
 
-- Critical CSS
+    ```shell
+    # create a new Gatsby site using the minimal TypeScript starter
+    npm init gatsby -- -ts
+    ```
 
-## Commands
+2.  **Start developing.**
 
-- develop
-- start 
-- build 
-- serve 
-- clean
+    Navigate into your new site’s directory and start it up.
 
-## Plugins
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-### Gatsby
+3.  **Open the code and start customizing!**
 
-- gatsby-plugin-react-intl
-- gatsby-plugin-web-font-loader
-- gatsby-plugin-manifest
-- gatsby-plugin-react-helmet
-- gatsby-plugin-sitemap
-- gatsby-plugin-sharp
-- gatsby-transformer-sharp
+    Your site is now running at http://localhost:8000!
 
-### React
+    Edit `src/pages/index.tsx` to see your site update in real-time!
 
-- styled-breakpoints
+4.  **Learn more**
 
-```
-const defaultBreakpoints = {
-  xs: '0px',
-  sm: '576px',
-  md: '768px',
-  lg: '992px',
-  xl: '1200px',
-  xxl: '1400px',
-};
-```
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-## todo
+## 🚀 Quick start (Netlify)
 
-- basic components
-- sort imports
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)

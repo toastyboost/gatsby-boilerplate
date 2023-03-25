@@ -6,6 +6,7 @@
       "esnext"
     ],
     "jsx": "react",
+    "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -22,15 +23,9 @@
     },
   },
   "include": [
-    "./src",
     "./src/**/*",
-    "./gatsby-browser.ts",
-    "./gatsby-config.ts",
     "./gatsby-node.ts",
-    "gatsby-ssr.tsx",
+    "gatsby-config.tsx",
     "./plugins/**/*"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }

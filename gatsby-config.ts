@@ -1,49 +1,43 @@
-import type { GatsbyConfig } from "gatsby";
+import { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
-  graphqlTypegen: true,
+  siteMetadata: {
+    title: `My Gatsby Site`,
+    siteUrl: `https://www.yourdomain.tld`,
+  },
+  graphqlTypegen: false,
   plugins: [
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          `JetBrains Mono\:400,700`,
-          `Roboto:400,700,900`
-        ],
-        display: 'swap'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        "icon": "src/images/icon.png"
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "images",
-        "path": "./src/images/"
+        fonts: [`JetBrains Mono\:400,700`, `Roboto:400,700,900`],
+        display: 'swap',
       },
-      __key: "images"
     },
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: "gatsby-plugin-react-intl",
       options: {
-        path: `${__dirname}/src/intl`,
-        languages: ["en", "de"],
+        path: `${__dirname}/src/libs/translations`,
+        languages: ["en", "ru"],
         defaultLanguage: "en",
         fallbackLanguage: "en",
         redirect: true,
         redirectDefaultLanguageToRoot: false,
       },
     },
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-  ]
-};
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
+    },
+  ],
+}
 
-export default config;
+export default config

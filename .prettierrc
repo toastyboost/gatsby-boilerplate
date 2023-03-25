@@ -1,8 +1,9 @@
 {
-  "parser" : "typescript",
-  "trailingComma": "all",
-  "tabWidth": 2,
+  "printWidth": 80,
   "semi": false,
   "singleQuote": true,
-  "plugins": ["./node_modules/prettier-plugin-import-sort"]
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "tabWidth": 2,
+  "useTabs": false
 }
