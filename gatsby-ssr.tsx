@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components/macro'
 
 const sheetByPathname = new Map()
 

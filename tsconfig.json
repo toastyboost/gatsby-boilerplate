@@ -17,8 +17,11 @@
       "@/*": [
         "./src/*"
       ],
-      "@/static/*": [
-        "./static/*"
+      "@/shared/*": [
+        "./shared/*",
+      ],
+      "@/shared/ui/atoms": [
+        "./shared/ui/atoms/*",
       ],
     },
   },

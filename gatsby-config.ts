@@ -19,9 +19,9 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-plugin-react-intl",
+      resolve: "gatsby-plugin-intl",
       options: {
-        path: `${__dirname}/src/libs/translations`,
+        path: `${__dirname}/src/shared/translations`,
         languages: ["en", "ru"],
         defaultLanguage: "en",
         fallbackLanguage: "en",
@@ -33,7 +33,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: './src/shared/static/',
       },
       __key: 'images',
     },
