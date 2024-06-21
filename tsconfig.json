@@ -17,12 +17,6 @@
       "@/*": [
         "./src/*"
       ],
-      "@/shared/*": [
-        "./shared/*",
-      ],
-      "@/shared/ui/atoms": [
-        "./shared/ui/atoms/*",
-      ],
     },
   },
   "include": [
